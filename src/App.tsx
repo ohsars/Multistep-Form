@@ -44,7 +44,8 @@ function App() {
   function onSubmit(e: FormEvent) {
     e.preventDefault()
     if (!isLastStep) return next()
-    alert("Form submitted!")
+    // alert("Form submitted!");
+    alert(JSON.stringify(data, null, 2))
   }
 
   return <div style={{
@@ -69,7 +70,7 @@ function App() {
         justifyContent: "flex-end", 
         gap: "1em" }}>
         {!isFirstStep && <button type="button" onClick={previous}>Previous</button>}
-        <button type="button">{isLastStep ? "Finish" : "Next"}</button>
+        <button type="submit" >{isLastStep ? "Finish" : "Next"}</button>
       </div>
     </form>
   </div>
