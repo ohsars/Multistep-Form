@@ -51,16 +51,18 @@ function App() {
   return <div style={{
     position: "relative",
     background: "white",
-    border: "1px solid black",
+    border: "2px solid black",
     padding: "2em",
     margin: "1em",
     borderRadius: ".5em",
     fontFamily: "Arial, sans-serif",
-    boxShadow: "0 0 1em rgba(0, 0, 0, .1)",
+    boxShadow: "0 0 3em rgba(0, 0, 0, .1)",
+    maxWidth: "max-content",
+  
   }}
     >
     <form onSubmit={onSubmit}>
-      <div style={{ position: "absolute", top: ".5rem", right: ".5rem" }}>
+      <div style={{ position: "absolute", top: ".5rem", right: ".5rem", fontSize: ".8em", color: "gray" }}> 
         {currentStepIndex + 1} / {steps.length}
       </div>
       {step}
